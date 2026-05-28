@@ -1,0 +1,96 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-body: 'Inter', sans-serif;
+  --font-display: 'Instrument Serif', serif;
+
+  --color-bg: hsl(var(--bg));
+  --color-surface: hsl(var(--surface));
+  --color-text-primary: hsl(var(--text));
+  --color-muted: hsl(var(--muted));
+  --color-stroke: hsl(var(--stroke));
+  --color-accent: hsl(var(--accent));
+
+  --color-background: hsl(var(--bg));
+  --color-foreground: hsl(var(--text));
+  --color-border: hsl(var(--stroke));
+  --color-input: hsl(var(--stroke));
+  --color-ring: hsl(var(--accent));
+  --color-primary: hsl(var(--text));
+  --color-primary-foreground: hsl(var(--bg));
+  --color-secondary: hsl(var(--surface));
+  --color-secondary-foreground: hsl(var(--text));
+  --color-card: hsl(var(--surface));
+  --color-card-foreground: hsl(var(--text));
+  --color-popover: hsl(var(--surface));
+  --color-popover-foreground: hsl(var(--text));
+  --color-muted-foreground: hsl(var(--muted));
+  --color-accent-foreground: hsl(var(--bg));
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.984 0.003 247.858);
+
+  --animate-scroll-down: scroll-down 1.5s ease-in-out infinite;
+  --animate-role-fade-in: role-fade-in 0.4s ease-out;
+  --animate-gradient-shift: gradient-shift 6s ease infinite;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --bg: 0 0% 4%;
+  --surface: 0 0% 8%;
+  --text: 0 0% 96%;
+  --muted: 0 0% 53%;
+  --stroke: 0 0% 12%;
+  --accent: 0 0% 96%;
+}
+
+@keyframes scroll-down {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+
+@keyframes role-fade-in {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@layer utilities {
+  .accent-gradient {
+    background: linear-gradient(90deg, #89AACC 0%, #4E85BF 100%);
+  }
+  .accent-gradient-animated {
+    background: linear-gradient(90deg, #89AACC 0%, #4E85BF 50%, #89AACC 100%);
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease infinite;
+  }
+  .font-body { font-family: var(--font-body); }
+  .font-display { font-family: var(--font-display); }
+}
+
+@layer base {
+  * { border-color: hsl(var(--stroke)); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: hsl(var(--bg));
+    color: hsl(var(--text));
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+}
