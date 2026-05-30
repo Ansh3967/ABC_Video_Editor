@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ITEMS = [
   { img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80", rot: -3 },
   { img: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=80", rot: 2 },
-  { img: "/public/images/visual-playground.jpeg", rot: -2 },
+  { img: "/images/visual-playground.jpeg", rot: -2 },
   { img: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80", rot: 3 },
   { img: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=600&q=80", rot: -1 },
   { img: "https://images.unsplash.com/photo-1635322966219-b75ed372eb01?w=600&q=80", rot: 2 },

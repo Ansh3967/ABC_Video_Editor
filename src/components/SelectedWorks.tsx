@@ -23,7 +23,7 @@ const PROJECTS = [
     title: "Brand Identity",
     span: "md:col-span-7",
     aspect: "aspect-[16/10]",
-    img: "public/images/Brand Identity.jpeg",
+    img: "images/Brand Identity.jpeg",
   },
 ];
 
