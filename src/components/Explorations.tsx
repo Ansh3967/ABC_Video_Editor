@@ -93,7 +93,7 @@ export function Explorations() {
       </div>
 
       <div className="absolute inset-0 z-20 pointer-events-none">
-        <div className="max-w-[1400px] mx-auto h-full px-6 md:px-10 grid grid-cols-2 gap-12 md:gap-40">
+        <div className="max-w-350 mx-auto h-full px-6 md:px-10 grid grid-cols-2 gap-12 md:gap-40">
           <div ref={leftColRef} className="flex flex-col gap-12 md:gap-24 pt-[20vh]">
             {left.map((it, i) => (
               <button
@@ -124,7 +124,7 @@ export function Explorations() {
       {lightbox && (
         <div
           onClick={() => setLightbox(null)}
-          className="fixed inset-0 z-[100] bg-bg/95 backdrop-blur-lg flex items-center justify-center p-6 cursor-zoom-out"
+          className="fixed inset-0 z-100 bg-bg/95 backdrop-blur-lg flex items-center justify-center p-6 cursor-zoom-out"
         >
           <img
             src={lightbox}
